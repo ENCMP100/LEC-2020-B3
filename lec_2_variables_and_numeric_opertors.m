@@ -69,6 +69,7 @@ a^2   % Exponent.
 % some basic commands
 clear a % deletes the variable a from the workspace
 clear   % clears all variables from the workspace
+clc     % clear the command window
 exit    % closes MATLAB
 
 
