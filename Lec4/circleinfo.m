@@ -1,5 +1,5 @@
 % CIRCLEINFO calculates the circumference and area of a circle
-% and display them.
+% and displays them.
 %
 % Author: YOUR NAME
 % ENCMP100 B3, Winter 2020.
