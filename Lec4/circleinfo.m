@@ -1,4 +1,4 @@
-% CIRCLEINFO: This script calculates the circumference and area of a circle
+% CIRCLEINFO calculates the circumference and area of a circle
 % and display them.
 %
 % Author: YOUR NAME
