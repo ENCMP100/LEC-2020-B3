@@ -24,20 +24,15 @@ end
 
 
 
+% Nested IF/ELSE statements
+% CHECK OUT the "salesstatus.m" example script.
 
-% IF/ELSEIF/ELSE statement
+
+% Nested IF/ELSE statements that can be merged into 
+% a more compact IF/ELSEIF/ELSE statements.
+
 num = 0.6; %rand;
 
-if num < 0.5
-    fprintf('A: The number %.2f is smaller than 0.5\n', num)
-elseif num < 0.75
-    fprintf('B: The number %.2f is greater than or equal to 0.5 but less than 0.75\n', num)
-else
-    fprintf('C: The number %.2f is greater than or equal to 0.75\n', num)
-end
-
-% The functionality of the above if/elseif/else statement is identical to
-% the following:
 if num < 0.5
     fprintf('A: The number %.2f is smaller than 0.5\n', num)
 else
@@ -48,8 +43,17 @@ else
     end
 end
 
+% IF/ELSEIF/ELSE version
+if num < 0.5
+    fprintf('A: The number %.2f is smaller than 0.5\n', num)
+elseif num < 0.75
+    fprintf('B: The number %.2f is greater than or equal to 0.5 but less than 0.75\n', num)
+else
+    fprintf('C: The number %.2f is greater than or equal to 0.75\n', num)
+end
 
-% A loooooong if/elseif/else statements with all conditions testing EQUALITY
+
+% A loooooong IF/ELSEIF/ELSE statements with all conditions testing EQUALITY
 clc
 day = input('Enter the day number (Monday = 1, etc): ');
 if day == 1
