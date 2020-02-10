@@ -1,6 +1,5 @@
-% Lecture 10 Part 2: FOR loops
-% Chapter 5.1 and 5.2
-
+% Lecture 10 Part 2: FOR and WHILE loops
+% Chapter 5.1, 5.2, 5.3
 
 %% FOR loop (iterating through a fixed number of times
 clc
