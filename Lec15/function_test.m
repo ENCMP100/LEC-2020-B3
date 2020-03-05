@@ -36,7 +36,7 @@ clc
 rad = input('Enter radius: ');
 
 % using the user-defined class circleinfo
-[c, a] = circleinfo(rad);
+[a, c] = circleinfo(rad);
 fprintf('Radius = %.2f\nArea = %.2f\nCircumference = %.2f\n\n', rad, a, c)
 
 %% Function containing local vaiables
