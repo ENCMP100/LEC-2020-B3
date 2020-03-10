@@ -9,14 +9,21 @@
 fullname = concat('John', 'Carter');
 fprintf('Full name: %s\n', fullname)
 
+
+
 % TO DO: call the above concat function in the command line.
 % You will get an error because this LOCAL function is only 
 % visible inside this script
+
 
 
 % Local function definition
 function result = concat(firstName, lastName)
 
 result = [firstName ' ' lastName];
+
+printsomething
+
+
 end
 

@@ -58,3 +58,17 @@ isstruct(employee)
 mat = rand(2);
 isstruct(mat)
 
+%% Preallocation
+
+clear
+clc
+
+person = struct('First_Name', '', ...
+                'Last_Name', '', ...
+                'Address', '', ...
+                'Salary', [], ...
+                'Age', 0);
+            
+            
+% preallocating a 100 element array of person structures
+personArray = repmat(person, 1, 100);
