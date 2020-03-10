@@ -13,7 +13,7 @@ x0 = shooter.x;
 y0 = shooter.y;
 
 % Finding the domain (x values) depending on which player is playing
-if shooter.playerNum == 1
+if shooter.Id == 1
     x = x0 : max(stage.x) + stage.buildingWidth/2;
 else
     x = x0 : -1 : 0;
@@ -26,10 +26,10 @@ u = velocity;
 y = y0 + tand(a) * (x - x0) - 9.81 * (x - x0).^2/(2 * u^2 * (cosd(a))^2);
 
 % Limiting the trajectory to the first hit of the building, if any
-[hitIndex, x, y] = findHitBuildingIndex(stage, shooter, x, y);
+[hitIndex, x, y] = findHitBuildingId(stage, shooter, x, y);
 
 isWon = ~isempty(hitIndex) && ...
-    hitIndex == target.buildingIndex && ...
+    hitIndex == target.buildingId && ...
     stage.x(hitIndex) - stage.buildingWidth/2 < x(end) && ...
     stage.x(hitIndex) + stage.buildingWidth/2 > x(end);
 
@@ -40,13 +40,13 @@ end
 
 
 
-function [hitIndex, trajX, trajY] = findHitBuildingIndex(stage, player, x, y)
+function [hitIndex, trajX, trajY] = findHitBuildingId(stage, player, x, y)
 
 hitIndex = [];
 
 if x(1) < x(end)
     % throwing towards the west direction
-    i = player.buildingIndex;
+    i = player.buildingId;
     
     while i <= length(stage.x) && isempty(hitIndex)
         
@@ -68,7 +68,7 @@ if x(1) < x(end)
     end
 else
     % throwing towards the east direction
-    i = player.buildingIndex;
+    i = player.buildingId;
     while i > 0 && isempty(hitIndex)
         
         entranceWallFaceX = stage.x(i) + stage.buildingWidth/2;

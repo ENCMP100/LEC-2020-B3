@@ -10,8 +10,19 @@
 % Jan - April, 2020
 
 %{
-    Requirements for Version 2
+    Requirements for Version 3
     ==========================
+
+    1. Version 3 must fulfil the functional requirements of version 2.
+
+    2. In addition, this version must refactor code and use functions and
+       structures to organized the progam code such that the main
+       gorillas.m file controls the overall functionality and the control
+       for while code related to specific functional blocks must be
+       implemented as seprate functions.
+
+    Requirements of Version 2
+    =========================
 
     1. The stage must be set and the 2 players must be placed similar to
        the version 1.
@@ -92,7 +103,7 @@ figure(gcf) % bring the current figure to focus
 
 %% Updated Code for Version 2
 
-activePlayerNum = 1; % Start with player 1 (human user)
+activePlayerId = 1; % Start with player 1 (human user)
 winner = ''; % Set this to the winner ('You' or 'Kong; when one of you win
 quit = false; % Set this to true the user inputs o for velocity
 
@@ -102,11 +113,11 @@ stage =  struct('x', stageX, ...
                 'buildingWidth', buildingWidth, ...
                 'step', step ...
                 );
-p1 = struct('x', p1x, 'y', p1y, 'playerNum', 1, 'buildingIndex', index1);
-p2 = struct('x', p2x, 'y', p2y, 'playerNum', 2, 'buildingIndex', index2);
+p1 = struct('x', p1x, 'y', p1y, 'Id', 1, 'buildingId', index1);
+p2 = struct('x', p2x, 'y', p2y, 'Id', 2, 'buildingId', index2);
 
 while isempty(winner) && ~quit
-    if activePlayerNum == 1
+    if activePlayerId == 1
         
         % You (Player 1) shoor a banana
         
@@ -125,7 +136,7 @@ while isempty(winner) && ~quit
             end
         end
         
-        activePlayerNum = 2; % turn the next iteration to player 2
+        activePlayerId = 2; % turn the next iteration to player 2
     else
         
         % Knog (Player 2) fires a banana
@@ -142,7 +153,7 @@ while isempty(winner) && ~quit
             winner = 'Kong';
         end
        
-        activePlayerNum = 1; % turn the next iteration to player 1
+        activePlayerId = 1; % turn the next iteration to player 1
     end
     fprintf('\n')
 end
