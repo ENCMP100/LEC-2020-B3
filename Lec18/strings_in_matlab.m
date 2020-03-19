@@ -95,7 +95,7 @@ lower("World!")
 % string comparisons
 str1 = "Hello";
 str2 = "hello";
-str3 = "World";
+str3 = "World!";
 
 strcmp(str1, str2)
 strcmpi(str1, str2)
@@ -103,7 +103,7 @@ strcmpi(str1, str2)
 strcmp(str1, str3)
 strcmpi(str1, str3)
 
-% STRFIND: finds occurrence of a string inside another string
+% STRFIND: finds all occurrences of a string inside another string
 str = "You cannot end a sentence with because because because is a conjunction.";
 strfind(str, "because")
 
@@ -135,7 +135,7 @@ ischar(rand(5))
 % ISSTRING: returns logical true if the input argument is a string object
 isstring('h')
 isstring('Hello')
-isstring("Hello") % returns false because input is a string object
+isstring("Hello") % returns true because input is a string object
 isstring(rand(5))
 
 
@@ -145,3 +145,18 @@ num2str(25)
 
 str2num("54")
 str2num('54')
+
+% STRTOC: string tokanization
+str = "You cannot end a sentence with because because because is a conjunction.";
+[token, remainder] = strtok(str)
+
+del = " ";
+
+while str ~= ""
+    [token, str] = strtok(str, del);
+    disp(token)
+end
+
+
+
+
