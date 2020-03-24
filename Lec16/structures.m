@@ -62,6 +62,9 @@ employee = rmfield(employee, 'Age');
 isfield(employee, 'FirstName')
 isfield(employee, 'Salary')
 
+% FIELDNAMES - returns all names of fields. This returns a "cell array"
+fieldnames(employee)
+
 % ISSTRUCT - checks whether a variable is a structure
 isstruct(employee)
 
