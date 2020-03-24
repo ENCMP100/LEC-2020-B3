@@ -6,11 +6,21 @@ clc
 
 % Creating a structure with different fields to store 
 % data of a person
-employee = struct('FirstName', 'James', 'LastName', 'Beck', ...
-                'Age', 27, 'Street', '123 40 Ave', ...
-                'City', 'Edmonton', 'Province', 'AB');
+employee = struct('FirstName', 'James', ...
+                  'LastName', 'Beck', ...
+                  'Age', 27, ...
+                  'Street', '123 40 Ave', ...
+                  'City', 'Edmonton', ...
+                  'Province', 'AB');
     
-            
+           
+ employee2 = struct('FirstName', 'John', ...
+                  'LastName', 'Boyd', ...
+                  'Age', 72, ...
+                  'Street', '454 40 Ave', ...
+                  'City', 'Calgary', ...
+                  'Province', 'AB');             
+              
 whos
 
 % Displaying the whole structure
@@ -72,3 +82,17 @@ person = struct('First_Name', '', ...
             
 % preallocating a 100 element array of person structures
 personArray = repmat(person, 1, 100);
+
+for i = 1:100
+    personArray(i).First_Name = input('Firt Name: ', 's');
+    personArray(i).Last_Name = input('Last Name: ', 's');
+    personArray(i).Age = input('Age: ');
+end
+
+
+
+
+
+
+
+
