@@ -3,7 +3,7 @@
 %
 % Reference: Attaway Chapter 9.3
 %
-% Lecture 20. ENCMP100B3
+% Lecture 22. ENCMP100B3
 %
 
 
