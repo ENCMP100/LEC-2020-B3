@@ -80,7 +80,7 @@ disp(c)
 
 
 %% Persistent Variables
-% ====================
+%  ====================
 
 % Let's review the function in aggregate.m and fix it to
 % make sure it works in the way it's documentation
