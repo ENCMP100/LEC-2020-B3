@@ -49,6 +49,8 @@ for r = rand(1,10) * 20
 end
 fprintf('Good bye ...\n')
 
+%% Command-line Debugging in Practice
+%
 % Let's clear all debug points and try few things that are
 % more applicable to the real world. When we run this code,
 % we will get some errors inside the circileinfo file. I 
